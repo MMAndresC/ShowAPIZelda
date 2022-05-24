@@ -1,0 +1,27 @@
+body {
+  background-image: url("./images/legend-zelda-breath-wild-1.webp");
+  background-size: cover;
+}
+
+div {
+  width: 80%;
+  border: 2px solid #013001;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+/*# sourceMappingURL=styles.css.map */

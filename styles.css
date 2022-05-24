@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 body {
   background-image: url("./images/legend-zelda-breath-wild-1.webp");
   background-size: cover;
@@ -23,5 +24,36 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 70vh;
+}
+
+button {
+  background-color: #075007;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Carter One', cursive;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.name {
+  border-bottom: 1px solid #013001;
+  background-color: #075707;
+  text-align: center;
+  margin: 0;
+  padding: 16px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,11 @@
 const property=['name', 'description', 'developer', 'released_date'];
 let index=0;
 
+
+
 const getCharacterFromApi = () =>{
     return fetch('https://zelda.fanapis.com/api/games', {
-        method :'get'
+        method :'GET'
         })
         .then(response => {
             return response.json();
@@ -27,7 +29,6 @@ const drawParagraph =(container) =>{
 const writeCard = (list,i,pos) =>{ 
     let newIndex;
     let total;
-    let title='';
     const p = document.querySelectorAll('p'); 
     if(pos === 1){
         newIndex=0;

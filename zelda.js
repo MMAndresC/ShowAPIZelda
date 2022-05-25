@@ -1,12 +1,21 @@
 const property=['name', 'description', 'developer', 'released_date'];
-let index=0;
+let index = 0;
+
+const apiTraductor = (container) => {
+
+     fetch(`https://api.funtranslations.com/translate/pirate.json?text=${container.innerText}`)
+          .then((res) => res.json())
+          .then((resJson) => {
+              console.log(resJson);
+                container.innerText = resJson.contents.translated
+            })
+}
 
 
 
 const getCharacterFromApi = () =>{
-    return fetch('https://zelda.fanapis.com/api/games', {
-        method :'GET'
-        })
+    return fetch('https://zelda.fanapis.com/api/games')
+
         .then(response => {
             return response.json();
         })
@@ -19,7 +28,7 @@ const getCharacterFromApi = () =>{
 }
 
 const drawParagraph =(container) =>{
-    for(let i =0; i < 4; i++){
+    for(let i = 0; i < 4; i++){
         const p = document.createElement('p');
         p.classList.add(property[i]);
         container.appendChild(p);
@@ -37,8 +46,13 @@ const writeCard = (list,i,pos) =>{
         newIndex=4;
         total=7
     } 
-    for(y = newIndex ; y <= total ; y++){
+    for(let y = newIndex ; y <= total ; y++){
         p[y].innerText = list.data[i][p[y].className];
+    }
+    if (pos===1){ //ESTO ES POR LA TRADUCCION
+        p[0].innerText = apiTraductor(p[0]);
+    }else{
+        p[4].innerText = apiTraductor(p[4]);
     }
 }
 
